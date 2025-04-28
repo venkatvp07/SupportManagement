@@ -1,4 +1,4 @@
-package com.repo.SupportManagement;
+package com.repo.supportmanagement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

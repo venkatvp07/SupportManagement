@@ -1,4 +1,4 @@
-package com.repo.SupportManagement;
+package com.repo.supportmanagement;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
