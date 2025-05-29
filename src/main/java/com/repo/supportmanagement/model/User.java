@@ -1,6 +1,10 @@
 package com.repo.supportmanagement.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "user")
@@ -9,6 +13,11 @@ public class User {
     @Id
     @GeneratedValue
     private Long userId;
+
+
+    @OneToMany(mappedBy = "raisedBy")
+    @JsonBackReference
+    private List<Incident> incidents;
 
     @Column(nullable = false)
     private String name;

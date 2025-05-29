@@ -3,6 +3,8 @@ package com.repo.supportmanagement.controller;
 import com.repo.supportmanagement.model.User;
 import com.repo.supportmanagement.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,8 +20,8 @@ public class UserController {
 
     @GetMapping("/{userId}")
     public User getUser(@PathVariable Long userId) {
-        Optional<User> userOpt =userRepo.getByUserId(userId);
-        return userOpt.get();
+       Optional<User> userOpt =userRepo.getByUserId(userId);
+       return userOpt.get();
     }
 
     @GetMapping
